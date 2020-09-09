@@ -23,6 +23,7 @@
 
 
   Repo: https://github.com/Vetty88/Workout-Tracker
+  Heroku (Demo): https://lit-garden-18972.herokuapp.com/
 
 Video of app in action, see file: https://github.com/vetty88/Note-Taker/blob/master/Note%20Taker.mp4
 
