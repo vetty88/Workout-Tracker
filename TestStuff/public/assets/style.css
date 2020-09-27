@@ -1,0 +1,62 @@
+body {
+  background-color: #F7FAFC;
+}
+
+.error {
+  color: red;
+}
+
+table tbody tr td, table thead tr th {
+  font-size:1.15rem;
+}
+
+.ui.table {
+  text-align:center;
+}
+.tableUnit {
+  text-align:center;
+}
+.ui.celled.table tr td:first-child, .ui.celled.table tr th:first-child {
+  border-left: 1px solid rgba(34,36,38,.1);
+}
+#routineExercises .exerciseButton {
+  margin-bottom:7px;
+}
+#addWorkoutButton, #endWorkoutButton, #addExerciseButton, #addFieldButton{
+  margin-bottom: 12px;
+}
+.borderTop {
+  border-top: 1px dotted #d4d4d5;
+  padding-top: 6px;
+  margin-top: 9px !important;
+}
+#timer{
+  float:left;
+  font-weight: 500;
+}
+.hidden {
+  display:none !important;
+}
+#manageRoutines .ui.segment {
+  margin:0;
+  padding:0;
+}
+#manageRoutines .ui.placeholder.segment {
+  background:none;
+}
+#addWorkoutForm, #addRoutineForm {
+  margin:15px 0;
+}
+.tableicon {
+  display:inline !important;
+  font-size:1.4rem !important;
+}
+
+@media only screen and (max-width: 767px) {
+  #manageRoutines div div .divider {
+    display:none;
+  }
+  #addExerciseButton, #addFieldButton {
+    margin-top:10px;
+  }
+}
