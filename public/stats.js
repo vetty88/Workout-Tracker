@@ -35,7 +35,7 @@ API.getWorkoutsInRange()
   }
 function populateChart(data) {
   let durations = duration(data);
-  let kgs = calculateTotalWeight(data);
+  let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -106,8 +106,8 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "kgs",
-          data: kgs,
+          label: "Pounds",
+          data: pounds,
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -131,7 +131,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "kgs Lifted"
+        text: "Pounds Lifted"
       },
       scales: {
         yAxes: [
@@ -173,7 +173,7 @@ function populateChart(data) {
         {
           label: "Excercises Performed",
           backgroundColor: colors,
-          data: kgs
+          data: pounds
         }
       ]
     },
