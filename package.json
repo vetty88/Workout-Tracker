@@ -1,20 +1,26 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "workouttracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fitness Tracking app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeders/seed.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "heroku": "^7.44.0",
     "mongoose": "^5.10.7",
     "morgan": "^1.9.1",
+    "node": "^14.13.0",
+    "serve": "^11.3.2",
     "skeleton": "^0.1.2"
   }
 }
