@@ -1,26 +1,37 @@
 {
-  "name": "workouttracker",
+  "name": "workout-tracker",
   "version": "1.0.0",
-  "description": "Fitness Tracking app",
+  "description": "workout tracking app",
   "main": "server.js",
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-    }
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "heroku": "^7.44.0",
     "mongoose": "^5.10.7",
-    "morgan": "^1.9.1",
+    "morgan": "^1.10.0",
     "node": "^14.13.0",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
     "serve": "^11.3.2",
     "skeleton": "^0.1.2"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vetty88/Workout-Tracker.git"
+  },
+  "keywords": [
+    "workout",
+    "fitness",
+    "app"
+  ],
+  "author": "y waller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vetty88/Workout-Tracker/issues"
+  },
+  "homepage": "https://github.com/vetty88/Workout-Tracker#readme"
 }
