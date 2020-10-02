@@ -22,16 +22,16 @@ URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
   - [Creator and Acknowledgements](#creator-and-acknowledgements)
   - [Badges](#badges)
 
-<h1> ## Workout-Tracker </h1>
+<h1> ## workout-Tracker </h1>
 
-  This app allows you to record, track and chart your workouts. You can track Cardio or Resistance type workouts.
+  This app allows you to record, track and chart your workouts. You can track cardio or resistance type workouts.
 
   Screenshot of Project (Google Chrome): 
   ![Screenshot](./Screen.PNG?raw=true)
   ![Screenshot](./Screen2.PNG?raw=true)
 
 
-  Repo: https://github.com/Vetty88/Workout-Tracker
+  Repo: https://github.com/Vetty88/workout-Tracker
   Heroku (Demo): https://lit-garden-18972.herokuapp.com/
 
 Video of app in action, see file: **coming soon**
@@ -45,7 +45,7 @@ This is an example of how to list things you need to use the software and how to
 
 Installation-
   Clone the repo
-    git clone https://github.com/Vetty88/Workout-Tracker.git
+    git clone https://github.com/Vetty88/workout-Tracker.git
   Install NPM packages
     npm install
     npm audit fix
@@ -90,7 +90,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 Creator Email - vetty88@gmail.com
 
-Project Link: https://github.com/Vetty88/Workout-Tracker
+Project Link: https://github.com/Vetty88/workout-Tracker
 
 ## Creator and Acknowledgements
 

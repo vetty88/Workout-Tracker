@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vetty88/Workout-Tracker.git"
+    "url": "git+https://github.com/vetty88/workout-Tracker.git"
   },
   "keywords": [
     "workout",
@@ -31,7 +31,7 @@
   "author": "y waller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vetty88/Workout-Tracker/issues"
+    "url": "https://github.com/vetty88/workout-Tracker/issues"
   },
-  "homepage": "https://github.com/vetty88/Workout-Tracker#readme"
+  "homepage": "https://github.com/vetty88/workout-Tracker#readme"
 }

@@ -12,7 +12,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 10)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Bicep Curl",
         duration: 20,
         weight: 100,
@@ -25,7 +25,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 9)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Lateral Pull",
         duration: 20,
         weight: 100,
@@ -38,7 +38,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 8)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Push Press",
         duration: 25,
         weight: 60,
@@ -51,7 +51,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 7)),
     exercises: [
       {
-        type: "Cardio",
+        type: "cardio",
         name: "Running",
         duration: 25,
         distance: 8
@@ -62,7 +62,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 6)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Bench Press",
         duration: 20,
         weight: 120,
@@ -75,7 +75,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 5)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Bench Press",
         duration: 20,
         weight: 150,
@@ -88,7 +88,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 4)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Quad Press",
         duration: 30,
         weight: 150,
@@ -101,7 +101,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 3)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Bench Press",
         duration: 20,
         weight: 150,
@@ -114,7 +114,7 @@ let workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 2)),
     exercises: [
       {
-        type: "Resistance",
+        type: "resistance",
         name: "Military Press",
         duration: 20,
         weight: 150,
@@ -125,8 +125,8 @@ let workoutSeed = [
   }
 ];
 
-db.Workout.deleteMany({})
-  .then(() => db.Workout.collection.insertMany(workoutSeed))
+db.workout.deleteMany({})
+  .then(() => db.workout.collection.insertMany(workoutSeed))
   .then(data => {
     console.table(data.result.n + " records inserted!");
     process.exit(0);

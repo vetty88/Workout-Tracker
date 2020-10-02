@@ -9,7 +9,7 @@ fetch("/api/workouts/range")
   });
 
 
-API.getWorkoutsInRange()
+API.getworkoutsInRange()
 
   function generatePalette() {
     const arr = [
@@ -35,7 +35,7 @@ API.getWorkoutsInRange()
   }
 function populateChart(data) {
   let durations = duration(data);
-  let KGs = calculateTotalWeight(data);
+  let kgs = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -58,7 +58,7 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "Workout Duration In Minutes",
+          label: "workout Duration In Minutes",
           backgroundColor: "red",
           borderColor: "red",
           data: durations,
@@ -106,8 +106,8 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "KGs",
-          data: KGs,
+          label: "kgs",
+          data: kgs,
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -131,7 +131,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "KGs Lifted"
+        text: "kgs Lifted"
       },
       scales: {
         yAxes: [
@@ -173,7 +173,7 @@ function populateChart(data) {
         {
           label: "exercises Performed",
           backgroundColor: colors,
-          data: KGs
+          data: kgs
         }
       ]
     },

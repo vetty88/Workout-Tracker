@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const Workout = require("../models/workout.js");
+const workout = require("../models/workout.js");
 
 router.post("/api/workouts", (req, res) => {
-  Workout.create({})
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+  workout.create({})
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.json(err);
@@ -12,14 +12,14 @@ router.post("/api/workouts", (req, res) => {
 });
 
 router.put("/api/workouts/:id", ({ body, params }, res) => {
-  Workout.findByIdAndUpdate(
+  workout.findByIdAndUpdate(
     params.id,
     { $push: { exercises: body } },
     // "runValidators" will ensure new exercises meet our schema requirements
     { new: true, runValidators: true }
   )
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.json(err);
@@ -27,9 +27,9 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 });
 
 router.get("/api/workouts", (req, res) => {
-  Workout.find()
-    .then(dbWorkouts => {
-      res.json(dbWorkouts);
+  workout.find()
+    .then(dbworkouts => {
+      res.json(dbworkouts);
     })
     .catch(err => {
       res.json(err);
@@ -37,10 +37,10 @@ router.get("/api/workouts", (req, res) => {
 });
 
 router.get("/api/workouts/range", (req, res) => {
-  Workout.find({}).limit(7)
-    .then(dbWorkouts => {
-      console.table(dbWorkouts);
-      res.json(dbWorkouts);
+  workout.find({}).limit(7)
+    .then(dbworkouts => {
+      console.table(dbworkouts);
+      res.json(dbworkouts);
     })
     .catch(err => {
       res.json(err);
@@ -48,7 +48,7 @@ router.get("/api/workouts/range", (req, res) => {
 });
 
 router.delete("/api/workouts", ({ body }, res) => {
-  Workout.findByIdAndDelete(body.id)
+  workout.findByIdAndDelete(body.id)
     .then(() => {
       res.json(true);
     })

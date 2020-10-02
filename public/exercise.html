@@ -27,17 +27,17 @@
             <label for="type">exercise Type:</label>
             <select name="type" id="type">
               <option disabled selected>Select exercise Type</option>
-              <option value="Resistance">Resistance</option>
-              <option value="Cardio">Cardio</option>
+              <option value="resistance">resistance</option>
+              <option value="cardio">cardio</option>
             </select>
           </div>
-          <div class="Cardio-form d-none">
-            <div class="Cardio-name">
-              <label for="Cardio-name">Name:</label>
-              <input type="text" name="Cardio-name" id="Cardio-name" placeholder="Running" />
+          <div class="cardio-form d-none">
+            <div class="cardio-name">
+              <label for="cardio-name">Name:</label>
+              <input type="text" name="cardio-name" id="cardio-name" placeholder="Running" />
             </div>
             <div class="distance">
-              <label for="distance">Distance (KMs):</label>
+              <label for="distance">Distance (kms):</label>
               <input type="number" name="distance" id="distance" placeholder="5" />
             </div>
             <div class="duration">
@@ -45,7 +45,7 @@
               <input type="number" name="duration" id="duration" placeholder="10" />
             </div>
           </div>
-          <div class="Resistance-form d-none">
+          <div class="resistance-form d-none">
             <div class="exercise">
               <label for="name">exercise Name:</label>
               <input type="text" name="name" id="name" placeholder="Bench Press" />
@@ -62,9 +62,9 @@
               <label for="reps">Reps:</label>
               <input type="number" name="reps" id="reps" placeholder="10" />
             </div>
-            <div class="Resistance-duration">
-              <label for="Resistance-duration">Duration (minutes):</label>
-              <input type="number" name="Resistance-duration" id="Resistance-duration" placeholder="10" />
+            <div class="resistance-duration">
+              <label for="resistance-duration">Duration (minutes):</label>
+              <input type="number" name="resistance-duration" id="resistance-duration" placeholder="10" />
             </div>
           </div>
           <div class="buttons">
@@ -80,7 +80,7 @@
     </div>
   </div>
   <div id="toast">
-    Workout Added Successfully!
+    workout Added Successfully!
   </div>
   <script src="/api.js"></script>
   <script src="/exercise.js"></script>
