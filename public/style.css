@@ -106,7 +106,7 @@ input {
   width: 500px;
 }
 
-form .Workout-type,
+form .workout-type,
 form .cardio-form div,
 form .resistance-form div {
   display: flex;
@@ -183,7 +183,7 @@ button {
   transition: all 1.2s;
 }
 
-.Workout-type,
+.workout-type,
 form .cardio-form div,
 form .resistance-form div {
   display: flex;
@@ -244,7 +244,7 @@ button {
   color: hsl(94, 90%, 16%);
   transition: all 0.5s;
 }
-.Workout-type,
+.workout-type,
 form .cardio-form div,
 form .resistance-form div {
   display: flex;
@@ -358,25 +358,25 @@ form > button {
   color: hsl(94, 90%, 16%);
 }
 
-.prev-Workout h3 {
+.prev-workout h3 {
   font-size: 2rem;
   width: 100%;
 }
 
-.prev-Workout p {
+.prev-workout p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-/* .Workout .card {
+/* .workout .card {
   width: 350px;
 } */
 
-.prev-Workout button {
+.prev-workout button {
   margin: 10px;
 }
 
-.new-Workout {
+.new-workout {
   display: none;
 }
 
@@ -384,15 +384,15 @@ form > button {
   margin-top: 20px;
 }
 
-.Workout .ui.card {
+.workout .ui.card {
   padding-top: 25px;
 }
 
-.prev-Workout {
+.prev-workout {
   text-align: center;
 }
 
-.prev-Workout .buttons {
+.prev-workout .buttons {
   display: flex;
   height: 75px;
   margin-top: 30px;
@@ -419,7 +419,7 @@ form > button {
   border-top-right-radius: 0;
 }
 
-.Workout-type,
+.workout-type,
 .cardio-form,
 .resistance-form {
   padding: 10px;
