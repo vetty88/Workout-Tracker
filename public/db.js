@@ -1,6 +1,6 @@
 let db;
-// create a new db request for a "workout" database.
-const request = indexedDB.open("workout", 1);
+// create a new db request for a "Workout" database.
+const request = indexedDB.open("Workout", 1);
 
 request.onupgradeneeded = function(event) {
    // create object store called "pending" and set autoIncrement to true
@@ -22,27 +22,27 @@ request.onerror = function(event) {
 };
 
 function saveRecord(record) {
-  // create a exercise on the pending db with readwrite access
-  const exercise = db.exercise(["pending"], "readwrite");
+  // create a Exercise on the pending db with readwrite access
+  const Exercise = db.Exercise(["pending"], "readwrite");
 
   // access your pending object store
-  const store = exercise.objectStore("pending");
+  const store = Exercise.objectStore("pending");
 
   // add record to your store with add method.
   store.add(record);
 }
 
 function checkDatabase() {
-  // open a exercise on your pending db
-  const exercise = db.exercise(["pending"], "readwrite");
+  // open a Exercise on your pending db
+  const Exercise = db.Exercise(["pending"], "readwrite");
   // access your pending object store
-  const store = exercise.objectStore("pending");
+  const store = Exercise.objectStore("pending");
   // get all records from store and set to a variable
   const getAll = store.getAll();
 
   getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
-      fetch("/api/exercise/bulk", {
+      fetch("/api/Exercise/bulk", {
         method: "POST",
         body: JSON.stringify(getAll.result),
         headers: {
@@ -52,11 +52,11 @@ function checkDatabase() {
       })
       .then(response => response.json())
       .then(() => {
-        // if successful, open a exercise on your pending db
-        const exercise = db.exercise(["pending"], "readwrite");
+        // if successful, open a Exercise on your pending db
+        const Exercise = db.Exercise(["pending"], "readwrite");
 
         // access your pending object store
-        const store = exercise.objectStore("pending");
+        const store = Exercise.objectStore("pending");
 
         // clear all items in your store
         store.clear();

@@ -1,7 +1,7 @@
 {
-  "name": "workout-tracker",
+  "name": "workouttracker",
   "version": "1.0.0",
-  "description": "workout tracking app",
+  "description": "Workout tracking app",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -21,17 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vetty88/workout-Tracker.git"
+    "url": "git+https://github.com/vetty88/Workout-Tracker.git"
   },
   "keywords": [
-    "workout",
+    "Workout",
     "fitness",
     "app"
   ],
   "author": "y waller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vetty88/workout-Tracker/issues"
+    "url": "https://github.com/vetty88/Workout-Tracker/issues"
   },
-  "homepage": "https://github.com/vetty88/workout-Tracker#readme"
+  "homepage": "https://github.com/vetty88/Workout-Tracker#readme"
 }

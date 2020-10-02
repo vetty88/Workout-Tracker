@@ -1,54 +1,54 @@
 const router = require("express").Router();
-const workout = require("../models/workout.js");
+const Workout = require("../models/Workout.js");
 
-router.post("/api/workouts", (req, res) => {
-  workout.create({})
-    .then(dbworkout => {
-      res.json(dbworkout);
+router.post("/api/Workouts", (req, res) => {
+  Workout.create({})
+    .then(dbWorkout => {
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.json(err);
     });
 });
 
-router.put("/api/workouts/:id", ({ body, params }, res) => {
-  workout.findByIdAndUpdate(
+router.put("/api/Workouts/:id", ({ body, params }, res) => {
+  Workout.findByIdAndUpdate(
     params.id,
-    { $push: { exercises: body } },
-    // "runValidators" will ensure new exercises meet our schema requirements
+    { $push: { Exercises: body } },
+    // "runValidators" will ensure new Exercises meet our schema requirements
     { new: true, runValidators: true }
   )
-    .then(dbworkout => {
-      res.json(dbworkout);
+    .then(dbWorkout => {
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.json(err);
     });
 });
 
-router.get("/api/workouts", (req, res) => {
-  workout.find()
-    .then(dbworkouts => {
-      res.json(dbworkouts);
+router.get("/api/Workouts", (req, res) => {
+  Workout.find()
+    .then(dbWorkouts => {
+      res.json(dbWorkouts);
     })
     .catch(err => {
       res.json(err);
     });
 });
 
-router.get("/api/workouts/range", (req, res) => {
-  workout.find({}).limit(7)
-    .then(dbworkouts => {
-      console.table(dbworkouts);
-      res.json(dbworkouts);
+router.get("/api/Workouts/range", (req, res) => {
+  Workout.find({}).limit(7)
+    .then(dbWorkouts => {
+      console.table(dbWorkouts);
+      res.json(dbWorkouts);
     })
     .catch(err => {
       res.json(err);
     });
 });
 
-router.delete("/api/workouts", ({ body }, res) => {
-  workout.findByIdAndDelete(body.id)
+router.delete("/api/Workouts", ({ body }, res) => {
+  Workout.findByIdAndDelete(body.id)
     .then(() => {
       res.json(true);
     })

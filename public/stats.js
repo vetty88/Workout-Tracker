@@ -1,6 +1,6 @@
-// get all workout data from back-end
+// get all Workout data from back-end
 
-fetch("/api/workouts/range")
+fetch("/api/Workouts/range")
   .then(response => {
     return response.json();
   })
@@ -9,7 +9,7 @@ fetch("/api/workouts/range")
   });
 
 
-API.getworkoutsInRange()
+API.getWorkoutsInRange()
 
   function generatePalette() {
     const arr = [
@@ -36,7 +36,7 @@ API.getworkoutsInRange()
 function populateChart(data) {
   let durations = duration(data);
   let kgs = calculateTotalWeight(data);
-  let workouts = workoutNames(data);
+  let Workouts = WorkoutNames(data);
   const colors = generatePalette();
 
   let line = document.querySelector("#canvas").getContext("2d");
@@ -58,7 +58,7 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "workout Duration In Minutes",
+          label: "Workout Duration In Minutes",
           backgroundColor: "red",
           borderColor: "red",
           data: durations,
@@ -148,10 +148,10 @@ function populateChart(data) {
   let pieChart = new Chart(pie, {
     type: "pie",
     data: {
-      labels: workouts,
+      labels: Workouts,
       datasets: [
         {
-          label: "exercises Performed",
+          label: "Exercises Performed",
           backgroundColor: colors,
           data: durations
         }
@@ -160,7 +160,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "exercises Performed"
+        text: "Exercises Performed"
       }
     }
   });
@@ -168,10 +168,10 @@ function populateChart(data) {
   let donutChart = new Chart(pie2, {
     type: "doughnut",
     data: {
-      labels: workouts,
+      labels: Workouts,
       datasets: [
         {
-          label: "exercises Performed",
+          label: "Exercises Performed",
           backgroundColor: colors,
           data: kgs
         }
@@ -180,7 +180,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "exercises Performed"
+        text: "Exercises Performed"
       }
     }
   });
@@ -189,9 +189,9 @@ function populateChart(data) {
 function duration(data) {
   let durations = [];
 
-  data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      durations.push(exercise.duration);
+  data.forEach(Workout => {
+    Workout.Exercises.forEach(Exercise => {
+      durations.push(Exercise.duration);
     });
   });
 
@@ -201,23 +201,23 @@ function duration(data) {
 function calculateTotalWeight(data) {
   let total = [];
 
-  data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      total.push(exercise.weight);
+  data.forEach(Workout => {
+    Workout.Exercises.forEach(Exercise => {
+      total.push(Exercise.weight);
     });
   });
 
   return total;
 }
 
-function workoutNames(data) {
-  let workouts = [];
+function WorkoutNames(data) {
+  let Workouts = [];
 
-  data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      workouts.push(exercise.name);
+  data.forEach(Workout => {
+    Workout.Exercises.forEach(Exercise => {
+      Workouts.push(Exercise.name);
     });
   });
   
-  return workouts;
+  return Workouts;
 }

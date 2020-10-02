@@ -8,11 +8,11 @@
 URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
 
 <<<<<<< HEAD
-![workout](https://user-images.githubusercontent.com/18619/81238507-20c83400-8fb7-11ea-9dda-85a49f49b715.png)
+![Workout](https://user-images.githubusercontent.com/18619/81238507-20c83400-8fb7-11ea-9dda-85a49f49b715.png)
 =======
 - [Installation](#installation)
 - [Demo](#demo)
-- [!workout](#img-srchttpsuser-imagesgithubusercontentcom1861981238507-20c83400-8fb7-11ea-9dda-85a49f49b715png-altworkout)
+- [!Workout](#img-srchttpsuser-imagesgithubusercontentcom1861981238507-20c83400-8fb7-11ea-9dda-85a49f49b715png-altWorkout)
   - [Installation](#installation-1)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -22,16 +22,16 @@ URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
   - [Creator and Acknowledgements](#creator-and-acknowledgements)
   - [Badges](#badges)
 
-<h1> ## workout-Tracker </h1>
+<h1> ## Workout-Tracker </h1>
 
-  This app allows you to record, track and chart your workouts. You can track cardio or resistance type workouts.
+  This app allows you to record, track and chart your Workouts. You can track cardio or resistance type Workouts.
 
   Screenshot of Project (Google Chrome): 
   ![Screenshot](./Screen.PNG?raw=true)
   ![Screenshot](./Screen2.PNG?raw=true)
 
 
-  Repo: https://github.com/Vetty88/workout-Tracker
+  Repo: https://github.com/Vetty88/Workout-Tracker
   Heroku (Demo): https://lit-garden-18972.herokuapp.com/
 
 Video of app in action, see file: **coming soon**
@@ -45,7 +45,7 @@ This is an example of how to list things you need to use the software and how to
 
 Installation-
   Clone the repo
-    git clone https://github.com/Vetty88/workout-Tracker.git
+    git clone https://github.com/Vetty88/Workout-Tracker.git
   Install NPM packages
     npm install
     npm audit fix
@@ -57,7 +57,7 @@ Installation-
 
 ## Usage
 
-This project can be used for tracking your workouts!. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This project can be used for tracking your Workouts!. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 For more examples, please refer to the Documentation
 
@@ -90,7 +90,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 Creator Email - vetty88@gmail.com
 
-Project Link: https://github.com/Vetty88/workout-Tracker
+Project Link: https://github.com/Vetty88/Workout-Tracker
 
 ## Creator and Acknowledgements
 

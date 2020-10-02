@@ -19,14 +19,14 @@
     <header>
       <h1>Fitness Tracker</h1>
     </header>
-    <div class="ui container exercise">
+    <div class="ui container Exercise">
       <div class="ui raised card m-auto">
-        <h2>Add Your exercise</h2>
+        <h2>Add Your Exercise</h2>
         <form action="POST">
-          <div class="workout-type">
-            <label for="type">exercise Type:</label>
+          <div class="Workout-type">
+            <label for="type">Exercise Type:</label>
             <select name="type" id="type">
-              <option disabled selected>Select exercise Type</option>
+              <option disabled selected>Select Exercise Type</option>
               <option value="resistance">resistance</option>
               <option value="cardio">cardio</option>
             </select>
@@ -46,8 +46,8 @@
             </div>
           </div>
           <div class="resistance-form d-none">
-            <div class="exercise">
-              <label for="name">exercise Name:</label>
+            <div class="Exercise">
+              <label for="name">Exercise Name:</label>
               <input type="text" name="name" id="name" placeholder="Bench Press" />
             </div>
             <div class="weight">
@@ -72,7 +72,7 @@
               Complete
             </button>
             <button disabled class="huge ui positive button add-another">
-              Add exercise
+              Add Exercise
             </button>
           </div>
         </form>
@@ -80,10 +80,10 @@
     </div>
   </div>
   <div id="toast">
-    workout Added Successfully!
+    Workout Added Successfully!
   </div>
   <script src="/api.js"></script>
-  <script src="/exercise.js"></script>
+  <script src="/Exercise.js"></script>
 </body>
 
 </html>
