@@ -24,7 +24,7 @@ URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
 
 <h1> ## Workout-Tracker </h1>
 
-  This app allows you to record, track and chart your workouts. You can track cardio or resistance type workouts.
+  This app allows you to record, track and chart your workouts. You can track Cardio or Resistance type workouts.
 
   Screenshot of Project (Google Chrome): 
   ![Screenshot](./Screen.PNG?raw=true)
