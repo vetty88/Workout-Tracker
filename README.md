@@ -5,8 +5,6 @@
 
 ```node server```
 # Demo
-URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
-
 <h1> ## workout-Tracker </h1>
 
   This app allows you to record, track and chart your workouts. You can track Cardio or Resistance type workouts.
@@ -17,7 +15,7 @@ URL: https://git.heroku.com/fitness-trackerapp-yw2020.git
 
 
   Repo: https://github.com/Vetty88/workout-Tracker
-  Heroku (Demo): https://lit-garden-18972.herokuapp.com/
+  Heroku (Demo): https://fitness-trackerapp-yw2020.herokuapp.com/
 
 Video of app in action, see file: **coming soon**
 
