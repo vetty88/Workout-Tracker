@@ -1,26 +1,27 @@
-async function initworkout() {
-  const lastworkout = await API.getLastworkout();
-  console.log("Last workout:", lastworkout);
-  if (lastworkout) {
+async function initWorkout() {
+  const lastWorkout = await API.getLastWorkout();
+  console.log("Last workout:", lastWorkout);
+  if (lastWorkout) {
     document
-      .querySelector("a[href='/Exercise?']")
-      .setAttribute("href", `/Exercise?id=${lastworkout._id}`);
+      .querySelector("a[href='/exercise?']")
+      .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
+      console.log(document.querySelector);
 
-    const workoutsummary = {
-      date: formatDate(lastworkout.day),
-      totalDuration: lastworkout.totalDuration,
-      numExercises: lastworkout.Exercises.length,
-      ...tallyExercises(lastworkout.Exercises)
+    const workoutSummary = {
+      date: formatDate(lastWorkout.day),
+      totalDuration: lastWorkout.totalDuration,
+      numExercises: lastWorkout.exercises.length,
+      ...tallyExercises(lastWorkout.exercises)
     };
 
-    renderworkoutsummary(workoutsummary);
+    renderWorkoutSummary(workoutSummary);
   } else {
-    renderNoworkoutText();
+    renderNoWorkoutText();
   }
 }
 
-function tallyExercises(Exercises) {
-  const tallied = Exercises.reduce((acc, curr) => {
+function tallyExercises(exercises) {
+  const tallied = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
       acc.totalWeight = (acc.totalWeight || 0) + curr.weight;
       acc.totalSets = (acc.totalSets || 0) + curr.sets;
@@ -44,12 +45,12 @@ function formatDate(date) {
   return new Date(date).toLocaleDateString(options);
 }
 
-function renderworkoutsummary(summary) {
+function renderWorkoutSummary(summary) {
   const container = document.querySelector(".workout-stats");
 
   const workoutKeyMap = {
     date: "Date",
-    totalDuration: "Total workout Duration",
+    totalDuration: "Total Workout Duration",
     numExercises: "Exercises Performed",
     totalWeight: "Total Weight Lifted",
     totalSets: "Total Sets Performed",
@@ -71,7 +72,7 @@ function renderworkoutsummary(summary) {
   });
 }
 
-function renderNoworkoutText() {
+function renderNoWorkoutText() {
   const container = document.querySelector(".workout-stats");
   const p = document.createElement("p");
   const strong = document.createElement("strong");
@@ -81,4 +82,4 @@ function renderNoworkoutText() {
   container.appendChild(p);
 }
 
-initworkout();
+initWorkout();

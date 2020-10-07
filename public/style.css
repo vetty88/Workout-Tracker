@@ -133,17 +133,17 @@ form::after {
   display: none !important;
 }
 
-.Exercise .ui.card {
+.exercise .ui.card {
   width: 400px;
   max-width: 600px;
 }
 
-.Exercise .buttons {
+.exercise .buttons {
   margin-top: 20px;
   display: flex;
 }
 
-.Exercise .buttons button {
+.exercise .buttons button {
   width: 100%;
 }
 

@@ -8,8 +8,8 @@ fetch("/api/workouts/range")
     populateChart(data);
   });
 
-
-API.getworkoutsInRange()
+ 
+API.getWorkoutsInRange();
 
   function generatePalette() {
     const arr = [
@@ -29,13 +29,13 @@ API.getworkoutsInRange()
     "#f95d6a",
     "#ff7c43",
     "ffa600"
-  ]
+  ];
 
   return arr;
   }
 function populateChart(data) {
   let durations = duration(data);
-  let kgs = calculateTotalWeight(data);
+  let kilos = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -58,7 +58,7 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "workout Duration In Minutes",
+          label: "Workout Duration In Minutes",
           backgroundColor: "red",
           borderColor: "red",
           data: durations,
@@ -106,8 +106,8 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "kgs",
-          data: kgs,
+          label: "Kilos",
+          data: kilos,
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -131,7 +131,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "kgs Lifted"
+        text: "Kilos Lifted"
       },
       scales: {
         yAxes: [
@@ -173,7 +173,7 @@ function populateChart(data) {
         {
           label: "Exercises Performed",
           backgroundColor: colors,
-          data: kgs
+          data: kilos
         }
       ]
     },
@@ -190,8 +190,8 @@ function duration(data) {
   let durations = [];
 
   data.forEach(workout => {
-    workout.Exercises.forEach(Exercise => {
-      durations.push(Exercise.duration);
+    workout.exercises.forEach(exercise => {
+      durations.push(exercise.duration);
     });
   });
 
@@ -202,8 +202,8 @@ function calculateTotalWeight(data) {
   let total = [];
 
   data.forEach(workout => {
-    workout.Exercises.forEach(Exercise => {
-      total.push(Exercise.weight);
+    workout.exercises.forEach(exercise => {
+      total.push(exercise.weight);
     });
   });
 
@@ -214,8 +214,8 @@ function workoutNames(data) {
   let workouts = [];
 
   data.forEach(workout => {
-    workout.Exercises.forEach(Exercise => {
-      workouts.push(Exercise.name);
+    workout.exercises.forEach(exercise => {
+      workouts.push(exercise.name);
     });
   });
   
