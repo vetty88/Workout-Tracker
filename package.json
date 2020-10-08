@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "heroku": "^7.44.0",
+    "mongodb": "^3.6.2",
     "mongoose": "^5.10.7",
     "morgan": "^1.10.0",
     "node": "^14.13.0",
