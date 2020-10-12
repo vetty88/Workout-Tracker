@@ -21,7 +21,7 @@ router.put("/api/workouts/:id", (req, res) => {
   Workout.findById(req.params.id, function (err, workoutById) {
     console.log("workoutById = ", workoutById);
     // grab all its exercises
-    const objExercise = workoutById.exercises;
+    const objExercise = workoutById.Exercise;
     console.log("objExercise = ", objExercise);
     objExercise.push(req.body); // push contents as new exercise
 
